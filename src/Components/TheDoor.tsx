@@ -7,6 +7,7 @@ import {PopupState} from '../enums.ts'
 export type Town = {
     code: string
     nom: string
+    population: number
 }
 
 export type TownTemperature = {
@@ -65,7 +66,9 @@ export default function TheDoor() {
     useEffect(() => {
         void fetch(import.meta.env.VITE_TOWNS_API_URL)
             .then(response => response.json())
-            .then((towns: Town[]) => setTowns(towns.splice(0, 30000)))
+            .then((towns: Town[]) => {
+                setTowns(towns.filter(town => town.population > 10000 && Number(town.code) < 96000))
+            })
     }, [])
 
     return (
