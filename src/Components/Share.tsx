@@ -14,33 +14,37 @@ import {
     TwitterShareButton,
     WhatsappIcon,
     WhatsappShareButton,
-    XIcon,
-} from 'react-share'
+    XIcon
+} from "react-share";
 
-const SHARE_URL = 'https://the-door.open'
-const TITLE = 'The Door - A game of temperature and towns'
+const SHARE_URL = "https://the-door.open";
+const TITLE = "The Door - A game of temperature and towns";
 
 export default function Share() {
     return (
-        <div className='flex space-x-2 pt-14 justify-center'>
+        <div className="flex space-x-2 pt-14 justify-center">
             <div>
                 <FacebookShareButton url={SHARE_URL}>
-                    <FacebookIcon size={32} round />
+                    <FacebookIcon
+                        size={32}
+                        round
+                    />
                 </FacebookShareButton>
 
                 <div>
-                    <FacebookShareCount url={SHARE_URL}>
-                        {count => count}
-                    </FacebookShareCount>
+                    <FacebookShareCount url={SHARE_URL}>{count => count}</FacebookShareCount>
                 </div>
             </div>
 
             <div>
                 <FacebookMessengerShareButton
                     url={SHARE_URL}
-                    appId='521270401588372'
+                    appId="521270401588372"
                 >
-                    <FacebookMessengerIcon size={32} round />
+                    <FacebookMessengerIcon
+                        size={32}
+                        round
+                    />
                 </FacebookMessengerShareButton>
             </div>
 
@@ -49,7 +53,10 @@ export default function Share() {
                     url={SHARE_URL}
                     title={TITLE}
                 >
-                    <XIcon size={32} round />
+                    <XIcon
+                        size={32}
+                        round
+                    />
                 </TwitterShareButton>
             </div>
 
@@ -57,15 +64,21 @@ export default function Share() {
                 <WhatsappShareButton
                     url={SHARE_URL}
                     title={TITLE}
-                    separator=':: '
+                    separator=":: "
                 >
-                    <WhatsappIcon size={32} round />
+                    <WhatsappIcon
+                        size={32}
+                        round
+                    />
                 </WhatsappShareButton>
             </div>
 
             <div>
                 <LinkedinShareButton url={SHARE_URL}>
-                    <LinkedinIcon size={32} round />
+                    <LinkedinIcon
+                        size={32}
+                        round
+                    />
                 </LinkedinShareButton>
             </div>
 
@@ -76,7 +89,10 @@ export default function Share() {
                     windowWidth={660}
                     windowHeight={460}
                 >
-                    <RedditIcon size={32} round />
+                    <RedditIcon
+                        size={32}
+                        round
+                    />
                 </RedditShareButton>
 
                 <div>
@@ -88,11 +104,14 @@ export default function Share() {
                 <EmailShareButton
                     url={SHARE_URL}
                     subject={TITLE}
-                    body='body'
+                    body="body"
                 >
-                    <EmailIcon size={32} round />
+                    <EmailIcon
+                        size={32}
+                        round
+                    />
                 </EmailShareButton>
             </div>
         </div>
-    )
+    );
 }
