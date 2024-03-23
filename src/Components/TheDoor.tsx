@@ -83,6 +83,7 @@ export default function TheDoor() {
     return (
         <div className={"h-screen w-screen flex flex-col items-center justify-center"}>
             <h1
+                className={"text-[3.2em] leading-[1.1]"}
                 style={{
                     textShadow: "2px 2px 2px pink",
                     filter: "drop-shadow(2px 2px 2px pink)"
