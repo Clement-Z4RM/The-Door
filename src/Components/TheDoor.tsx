@@ -138,6 +138,7 @@ export default function TheDoor() {
                     setPopup(PopupState.Closed);
                 }}
                 success={popup == PopupState.Success}
+                answer={temperature.town}
             />
             <Share />
         </div>

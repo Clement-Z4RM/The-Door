@@ -6,6 +6,7 @@ type PopupProps = {
     open: boolean;
     close: () => void;
     success: boolean;
+    answer: string;
 };
 
 type IconProps = {
@@ -32,7 +33,7 @@ function Icon({ success }: IconProps) {
     );
 }
 
-export default function Popup({ open, close, success }: PopupProps) {
+export default function Popup({ open, close, success, answer }: PopupProps) {
     return (
         <Transition.Root
             show={open}
@@ -73,8 +74,11 @@ export default function Popup({ open, close, success }: PopupProps) {
                                             as="h3"
                                             className="text-base font-semibold leading-6"
                                         >
-                                            {success ? "Tu as trouvé, bravo 🎉! " : "Dommage, ce n'est pas ça 😢."}
+                                            {success ? "Tu as trouvé, bravo 🎉 ! " : "Dommage, ce n'est pas ça 😢."}
                                         </Dialog.Title>
+                                        <div className="mt-2">
+                                            <p className="text-sm">{`C'était ${answer} !`}</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="mt-5 sm:mt-6">
